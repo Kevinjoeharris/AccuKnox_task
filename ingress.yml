@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: accuknox-ingress
+  namespace: default
+spec:
+  tls:
+    - hosts:
+        - localhost   
+      secretName: #Path to tls secret
+  rules:
+    - host: localhost  
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: accuknox-service
+                port:
+                  number: 4499  
