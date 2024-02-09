@@ -4,6 +4,8 @@ metadata:
   name: accuknox-service
   namespace: default
 spec:
+  selector:
+    app: accuknoxpra
   type: NodePort  
   ports:
     - protocol: TCP

@@ -7,5 +7,5 @@ RUN apk update && apk add cowsay fortune \
 
 COPY wisecow.sh /app/wisecow.sh
 WORKDIR /app
-EXPOSE 4499
+EXPOSE 4498
 CMD ["sh","/app/wisecow.sh"]

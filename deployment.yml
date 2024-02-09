@@ -7,15 +7,16 @@ spec:
    replicas: 1
    selector:
       matchLabels:
-         bb: web
+         app: accuknoxpra
    template:
       metadata:
          labels:
-            bb: web
+            app: accuknoxpra
+
       spec:
          containers:
-            - name: accuknox-kub
-              image: accuknox
+            - name: accuknox-cont
+              image: accuknox:latest
               imagePullPolicy: Never
               ports:
                 - containerPort: 4499
